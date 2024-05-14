@@ -122,7 +122,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DATABASES = {
     "default": dj_database_url.parse(
-        os.environ.get("DATABASE_URL", "postgres://f_store_user:n4TC19B9DXuoOVJDx8guj32cyIHQSX7U@dpg-cp1msbect0pc73d4a3j0-a.singapore-postgres.render.com/f_store")
+        os.environ.get("DATABASE_URL", "postgres://f_store_user:n4TC19B9DXuoOVJDx8guj32cyIHQSX7U@dpg-cp1msbect0pc73d4a3j0-a/f_store")
     )
 }
 
