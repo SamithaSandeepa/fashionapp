@@ -15,6 +15,7 @@ import os
 import firebase_admin
 from firebase_admin import credentials
 from dotenv import load_dotenv
+import django_heroku
 
 load_dotenv()
 
@@ -182,3 +183,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+django_heroku.settings(locals())
