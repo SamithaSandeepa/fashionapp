@@ -48,11 +48,8 @@ class AllComments(APIView):
         # Group comments by product_id
         grouped_comments = defaultdict(list)
         for comment in serializer.data:
-            grouped_comments[comment['product_id']].append({
-                "product_name": comment['product_name'],
-                "comments": comment['comments']
-            })
-        
+            grouped_comments[comment['product_id'],comment['product_name']].append(comment['comments'])
+            
         # Prepare the response data
         response_data = []
         for product_id, comments in grouped_comments.items():
