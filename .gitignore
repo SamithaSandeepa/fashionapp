@@ -136,3 +136,5 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+firebase_credentials-1.json
+firebase_credentials.json

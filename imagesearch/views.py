@@ -12,33 +12,46 @@ import uuid
 
 # Define the class names for your model
 CLASS_NAMES = {
-    0: 'ladies_croptop',
-    1: 'ladies_denim',
-    2: 'ladies_denim_skirt',
-    3: 'ladies_long_dress',
-    4: 'ladies_long_skirt',
-    5: 'ladies_longsleeve_blouse',
-    6: 'ladies_longsleeve_tshirt',
-    7: 'ladies_pants',
-    8: 'ladies_short',
-    9: 'ladies_short_dress',
-    10: 'ladies_short_skirt',
-    11: 'ladies_shortsleeve_blouse',
-    12: 'ladies_sleeveless_blouse',
-    13: 'men_denim',
-    14: 'men_hoodies',
-    15: 'men_longsleeve_shirt',
-    16: 'men_longsleeve_tshirt',
-    17: 'men_oversized_tshirt',
-    18: 'men_pants',
-    19: 'men_short',
-    20: 'men_shortsleeve_shirt',
-    21: 'men_tshirt'
+    0: 'Clothes',
+    1: 'Men_Activewear_Pant',
+    2: 'Men_Activewear_Short',
+    3: 'Men_Activewear_Top',
+    4: 'Men_Bottom_Short',
+    5: 'Men_Bottom_Trouser',
+    6: 'Men_Outwear_Jacket',
+    7: 'Men_Outwear_Vest',
+    8: 'Men_Outwear_Windbreaker',
+    9: 'Men_Suit_Blazer',
+    10: 'Men_Suit_Businesssuit',
+    11: 'Men_Swimwear_Swimtrunk',
+    12: 'Men_Top_Dressshirt',
+    13: 'Men_Top_Poloshirt',
+    14: 'Men_Top_Sweater',
+    15: 'Men_Top_Tshirt',
+    16: 'Women_Activewear_Legging',
+    17: 'Women_Activewear_Top',
+    18: 'Women_Bottom_Pant',
+    19: 'Women_Bottom_Short',
+    20: 'Women_Bottom_Skirt',
+    21: 'Women_Dress_Casual',
+    22: 'Women_Dress_Summer',
+    23: 'Women_Outwear_Cardigan',
+    24: 'Women_Outwear_Coat',
+    25: 'Women_Outwear_Jacket',
+    26: 'Women_Suit_Pantsuit',
+    27: 'Women_Suit_Skirtsuit',
+    28: 'Women_Swimwear_Cover',
+    29: 'Women_Swimwear_Swimwear',
+    30: 'Women_Top_Blouse',
+    31: 'Women_Top_Croptop',
+    32: 'Women_Top_Sweater',
+    33: 'Women_Top_Tshirt'
 }
+
 
 # Load the YOLO model
 def load_model():
-    model_path = os.path.join(settings.BASE_DIR, 'imagesearch', 'models', 'bestv1.pt')
+    model_path = os.path.join(settings.BASE_DIR, 'imagesearch', 'models', 'bestv2.pt')
     model = YOLO(model_path)
     return model
 
