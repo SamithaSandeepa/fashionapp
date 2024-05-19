@@ -173,11 +173,14 @@ class PredictFashionView(APIView):
 
         # Sample target variable columns (adjust according to your model's output)
         target_columns = [
-            'Fashion Style_Casual', 'Fashion Style_Formal', 'Fashion Style_Minimalist', 'Fashion Style_Other', 'Fashion Style_Sporty', 'Fashion Style_Vintage',
-            'Fashion Brand_Adidas', 'Fashion Brand_Gucci', 'Fashion Brand_H&M', 'Fashion Brand_Nike', 'Fashion Brand_No Brand', 'Fashion Brand_Other', 'Fashion Brand_Zara',
-            'Cloth Type_Bottoms', 'Cloth Type_Dresses', 'Cloth Type_Footwear', 'Cloth Type_Other', 'Cloth Type_Shirt', 'Cloth Type_Skirt', 'Cloth Type_T-shirt', 'Cloth Type_Tops', 'Cloth Type_Trouser',
-            'Garment Fitting_Baggy', 'Garment Fitting_Classic Fit', 'Garment Fitting_Other', 'Garment Fitting_Regular Fit', 'Garment Fitting_Slim Fit'
+            'fashion_style Casual', 'fashion_style Formal', 'fashion_style Minimalist', 'fashion_style Other', 'fashion_style Sporty', 'fashion_style Vintage',
+            'fashion_brand Adidas', 'fashion_brand Gucci', 'fashion_brand H&M', 
+            'fashion_brand Nike', 
+            'fashion_brand No_Brand', 'fashion_brand Other', 'fashion_brand Zara',
+            'cloth_type Bottoms', 'cloth_type Dresses', 'cloth_type Footwear', 'cloth_type Type_Other', 'cloth_type Shirt', 'cloth_type Skirt', 'cloth_type T-shirt', 'cloth_type Tops', 'cloth_type Trouser',
+            'garment_fitting Baggy', 'garment_fitting Classic Fit', 'garment_fitting Other', 'garment_fitting Regular Fit', 'garment_fitting Slim_Fit'
         ]
+
 
         # Decode the prediction
         predicted_classes = decode_prediction(predicted_values, target_columns)
